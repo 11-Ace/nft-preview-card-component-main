@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* Global */
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--white);
+  background-color: var(--main-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--white);
+}
+
+/* Main */
+.card {
+  position: relative;
+  margin: auto;
+  width: 320px;
+  max-width: 90%;
+  background-color: var(--card-bg);
+  padding: 22px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card > p {
+  color:var(--soft-blue);
+  line-height: 25px;
+  font-weight: 300;
+}
+
+/* NFT image */
+.equilibrium {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.img-display {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  background-color: var(--cyan);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.overlay:hover {
+  opacity: .6;
+}
+
+/* Details */
+h3 {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+h3:hover {
+  color: var(--cyan);
+}
+
+.cost {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--line)
+}
+
+.cost p {
+  display: flex;
+  align-items: center;
+}
+
+.cost img {
+  margin-right: 7px;
+}
+
+.cost .price {
+  color:  var(--cyan);
+}
+
+.cost .time-left {
+  color: var(--soft-blue);
+}
+
+/* Author */
+.creator {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color:  var(--soft-blue);
+}
+
+.creator .avatar {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.creator a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+.creator a:hover{
+  color: hsl(178, 100%, 50%);
+}
+
+/* footer */
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 87%, 65%);
+}
+
+/* Media Queries (mobile view) */
+@media (max-width: 375px) {
+  body {
+    height: auto;
+  }
+
+  .card {
+    margin: 50px auto;
+    overflow: initial;
+  }
+}
